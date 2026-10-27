@@ -68,7 +68,6 @@ def parse_function_args(decl: dict) -> list[FunctionArgDecl]:
 
   for arg in args:
     if arg.type.is_array and arg.type.array_length_has_field:
-      print(arg.type.array_length)
       args_by_name[arg.type.array_length].array_length_of = arg.name
 
   return args

@@ -52,7 +52,7 @@ class StructMemberDecl:
       return StructMemberKind.DEFAULTED, type.resolve_dart_default()
 
     if type.is_struct and default == 'zero':
-      return StructMemberKind.SENTINEL, f'_${type.dart_name}$Zero'
+      return StructMemberKind.SENTINEL, f'zero'
 
     if type.is_array and default == 'nullptr':
       return StructMemberKind.SENTINEL, f'ffi.nullptr'
@@ -144,11 +144,9 @@ def parse_struct_members(decl: dict) -> list[StructMemberDecl]:
 
   for m in members:
     if m.type.is_array and m.type.array_length_has_field:
-      print(m.type.array_length)
       members_by_name[m.type.array_length].array_length_of = m.name
 
   return members
-
 
 
 def parse_extensible(value: str) -> Extensible:
@@ -236,17 +234,6 @@ def generate_struct_code(struct: StructDecl) -> tuple[list[str], list[str]]:
   else: code = decl
 
   impl_code.append(f'')
-  # Impl: zero-init
-  if struct.has_zero:
-    impl_code.append(f'const {struct.dart_name} _${struct.dart_name}$Zero = .new(')
-
-    for member in struct.members:
-      kind, _ = member.resolve_kind()
-      if kind == StructMemberKind.DEFAULTED and not member.type.is_struct: pass
-      else: impl_code.append(f'  {member.dart_name}: {member.zero_value},')
-
-    impl_code.append(f');')
-    impl_code.append(f'')
 
   # Impl: to native
   if not struct.is_derived:

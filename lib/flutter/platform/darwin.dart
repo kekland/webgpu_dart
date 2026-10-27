@@ -83,7 +83,6 @@ final class DarwinWebGpuRenderObject extends WebGpuRenderObject {
       .new(
         initialized: false,
         concurrentRead: false,
-
       ),
     );
     if (status != .success) {
@@ -92,7 +91,18 @@ final class DarwinWebGpuRenderObject extends WebGpuRenderObject {
     }
 
     final view = texture.createView();
-    renderable.render(view, .bgra8unorm, width, height);
+
+    final renderContext = RenderContext(
+      textureView: view,
+      textureFormat: texture.format,
+      textureWidth: width,
+      textureHeight: height,
+      devicePixelRatio: devicePixelRatio,
+      size: size,
+    );
+
+    renderable.performRender(renderContext);
+
     final endAccessState = memory.endAccess(texture);
     _texture!.present(endAccessState);
     _texture!.frameAvailable();

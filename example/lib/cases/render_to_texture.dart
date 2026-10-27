@@ -72,8 +72,8 @@ final class RenderToTextureRenderable with ChangeNotifier, webgpu.Renderable {
   }
 
   Future<void> _initialize() async {
-    instance = webgpu.Instance.defaultInstance;
-    final adapter = await instance!.requestAdapter();
+    final instance = webgpu.Instance.defaultInstance;
+    final adapter = await instance.requestAdapter();
     device = await adapter.requestDefaultDevice();
     notifyListeners();
   }
@@ -89,10 +89,7 @@ final class RenderToTextureRenderable with ChangeNotifier, webgpu.Renderable {
   webgpu.Device? device;
 
   @override
-  webgpu.Instance? instance;
-
-  @override
-  void render(webgpu.TextureView renderTextureView, webgpu.TextureFormat renderTextureFormat, int width, int height) {
+  void performRender(webgpu.RenderContext context) {
     const _crt = r'''
 struct Uniforms {
   t: f32
@@ -296,7 +293,7 @@ fn fs_main(in: VertexOutput) -> @location(0) vec4f {
           module: shader,
           entryPoint: 'fs_main',
           targets: [
-            .new(format: renderTextureFormat, writeMask: .all),
+            .new(format: context.textureFormat, writeMask: .all),
           ],
         ),
         primitive: .new(topology: .triangleList, cullMode: .none),
@@ -326,7 +323,7 @@ fn fs_main(in: VertexOutput) -> @location(0) vec4f {
       .new(
         colorAttachments: [
           .new(
-            view: renderTextureView,
+            view: context.textureView,
             loadOp: .clear,
             storeOp: .store,
             clearValue: .new(r: 0.0, g: 0.0, b: 0.0, a: 1.0),

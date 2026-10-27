@@ -946,10 +946,6 @@ SubgroupMatrixComponentType _SubgroupMatrixComponentType$FromValue(int value) =>
 };
 
 
-const RequestAdapterOptions _$RequestAdapterOptions$Zero = .new(
-  compatibleSurface: null,
-);
-
 ffi.Pointer<bindings.WGPURequestAdapterOptions> _RequestAdapterOptions$ToNative(ffi.Allocator allocator, RequestAdapterOptions value) {
   final ptr = allocator<bindings.WGPURequestAdapterOptions>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -1000,9 +996,6 @@ final class const RequestAdapterWebGPUBackendOptions({
   @override
   SType get sType => .requestAdapterWebGPUBackendOptions;
 }
-
-const RequestAdapterWebGPUBackendOptions _$RequestAdapterWebGPUBackendOptions$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPURequestAdapterWebGPUBackendOptions> _RequestAdapterWebGPUBackendOptions$ToNative(ffi.Allocator allocator, RequestAdapterWebGPUBackendOptions value) {
   final ptr = allocator<bindings.WGPURequestAdapterWebGPUBackendOptions>();
@@ -1060,15 +1053,6 @@ AdapterInfo _AdapterInfo$FromNative(bindings.WGPUAdapterInfo str, {bool borrowed
   );
 }
 
-
-const DeviceDescriptor _$DeviceDescriptor$Zero = .new(
-  label: null,
-  requiredFeatures: null,
-  requiredLimits: null,
-  defaultQueue: _$QueueDescriptor$Zero,
-  deviceLostCallback: null,
-  uncapturedErrorCallback: null,
-);
 
 ffi.Pointer<bindings.WGPUDeviceDescriptor> _DeviceDescriptor$ToNative(ffi.Allocator allocator, DeviceDescriptor value) {
   final ptr = allocator<bindings.WGPUDeviceDescriptor>();
@@ -1129,9 +1113,6 @@ final class const DawnConsumeAdapterDescriptor({
   SType get sType => .dawnConsumeAdapterDescriptor;
 }
 
-const DawnConsumeAdapterDescriptor _$DawnConsumeAdapterDescriptor$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUDawnConsumeAdapterDescriptor> _DawnConsumeAdapterDescriptor$ToNative(ffi.Allocator allocator, DawnConsumeAdapterDescriptor value) {
   final ptr = allocator<bindings.WGPUDawnConsumeAdapterDescriptor>();
   ptr.ref.chain.sType = value.sType.value;
@@ -1156,9 +1137,6 @@ final class const DawnTogglesDescriptor({
   @override
   SType get sType => .dawnTogglesDescriptor;
 }
-
-const DawnTogglesDescriptor _$DawnTogglesDescriptor$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUDawnTogglesDescriptor> _DawnTogglesDescriptor$ToNative(ffi.Allocator allocator, DawnTogglesDescriptor value) {
   final ptr = allocator<bindings.WGPUDawnTogglesDescriptor>();
@@ -1261,9 +1239,6 @@ final class const DawnDeviceAllocatorControl({
   SType get sType => .dawnDeviceAllocatorControl;
 }
 
-const DawnDeviceAllocatorControl _$DawnDeviceAllocatorControl$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUDawnDeviceAllocatorControl> _DawnDeviceAllocatorControl$ToNative(ffi.Allocator allocator, DawnDeviceAllocatorControl value) {
   final ptr = allocator<bindings.WGPUDawnDeviceAllocatorControl>();
   ptr.ref.chain.sType = value.sType.value;
@@ -1287,9 +1262,6 @@ final class const DawnWGSLBlocklist({
   @override
   SType get sType => .dawnWGSLBlocklist;
 }
-
-const DawnWGSLBlocklist _$DawnWGSLBlocklist$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUDawnWGSLBlocklist> _DawnWGSLBlocklist$ToNative(ffi.Allocator allocator, DawnWGSLBlocklist value) {
   final ptr = allocator<bindings.WGPUDawnWGSLBlocklist>();
@@ -1403,9 +1375,6 @@ BindGroupDescriptor _BindGroupDescriptor$FromNative(bindings.WGPUBindGroupDescri
 }
 
 
-const BufferBindingLayout _$BufferBindingLayout$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUBufferBindingLayout> _BufferBindingLayout$ToNative(ffi.Allocator allocator, BufferBindingLayout value) {
   final ptr = allocator<bindings.WGPUBufferBindingLayout>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -1427,9 +1396,6 @@ BufferBindingLayout _BufferBindingLayout$FromNative(bindings.WGPUBufferBindingLa
   );
 }
 
-
-const SamplerBindingLayout _$SamplerBindingLayout$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUSamplerBindingLayout> _SamplerBindingLayout$ToNative(ffi.Allocator allocator, SamplerBindingLayout value) {
   final ptr = allocator<bindings.WGPUSamplerBindingLayout>();
@@ -1474,9 +1440,6 @@ StaticSamplerBindingLayout _StaticSamplerBindingLayout$FromNative(bindings.WGPUS
   );
 }
 
-
-const TextureBindingLayout _$TextureBindingLayout$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUTextureBindingLayout> _TextureBindingLayout$ToNative(ffi.Allocator allocator, TextureBindingLayout value) {
   final ptr = allocator<bindings.WGPUTextureBindingLayout>();
@@ -1687,9 +1650,6 @@ TexelBufferBindingEntry _TexelBufferBindingEntry$FromNative(bindings.WGPUTexelBu
 }
 
 
-const ExternalTextureBindingLayout _$ExternalTextureBindingLayout$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUExternalTextureBindingLayout> _ExternalTextureBindingLayout$ToNative(ffi.Allocator allocator, ExternalTextureBindingLayout value) {
   final ptr = allocator<bindings.WGPUExternalTextureBindingLayout>();
   ptr.ref.chain.sType = value.sType.value;
@@ -1703,9 +1663,6 @@ ExternalTextureBindingLayout _ExternalTextureBindingLayout$FromNative(bindings.W
   );
 }
 
-
-const StorageTextureBindingLayout _$StorageTextureBindingLayout$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUStorageTextureBindingLayout> _StorageTextureBindingLayout$ToNative(ffi.Allocator allocator, StorageTextureBindingLayout value) {
   final ptr = allocator<bindings.WGPUStorageTextureBindingLayout>();
@@ -1737,9 +1694,6 @@ final class const TexelBufferBindingLayout({
   SType get sType => .texelBufferBindingLayout;
 }
 
-const TexelBufferBindingLayout _$TexelBufferBindingLayout$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUTexelBufferBindingLayout> _TexelBufferBindingLayout$ToNative(ffi.Allocator allocator, TexelBufferBindingLayout value) {
   final ptr = allocator<bindings.WGPUTexelBufferBindingLayout>();
   ptr.ref.chain.sType = value.sType.value;
@@ -1766,10 +1720,10 @@ ffi.Pointer<bindings.WGPUBindGroupLayoutEntry> _BindGroupLayoutEntry$ToNative(ff
   ptr.ref.binding = value.binding;
   ptr.ref.visibility = value.visibility.value;
   ptr.ref.bindingArraySize = value.bindingArraySize;
-  ptr.ref.buffer = _BufferBindingLayout$ToNative(allocator, (value.buffer ?? _$BufferBindingLayout$Zero)).ref;
-  ptr.ref.sampler = _SamplerBindingLayout$ToNative(allocator, (value.sampler ?? _$SamplerBindingLayout$Zero)).ref;
-  ptr.ref.texture = _TextureBindingLayout$ToNative(allocator, (value.texture ?? _$TextureBindingLayout$Zero)).ref;
-  ptr.ref.storageTexture = _StorageTextureBindingLayout$ToNative(allocator, (value.storageTexture ?? _$StorageTextureBindingLayout$Zero)).ref;
+  if (value.buffer != null) ptr.ref.buffer = _BufferBindingLayout$ToNative(allocator, value.buffer!).ref;
+  if (value.sampler != null) ptr.ref.sampler = _SamplerBindingLayout$ToNative(allocator, value.sampler!).ref;
+  if (value.texture != null) ptr.ref.texture = _TextureBindingLayout$ToNative(allocator, value.texture!).ref;
+  if (value.storageTexture != null) ptr.ref.storageTexture = _StorageTextureBindingLayout$ToNative(allocator, value.storageTexture!).ref;
   return ptr;
 }
 
@@ -1793,10 +1747,6 @@ BindGroupLayoutEntry _BindGroupLayoutEntry$FromNative(bindings.WGPUBindGroupLayo
   );
 }
 
-
-const BindGroupLayoutDescriptor _$BindGroupLayoutDescriptor$Zero = .new(
-  label: null,
-);
 
 ffi.Pointer<bindings.WGPUBindGroupLayoutDescriptor> _BindGroupLayoutDescriptor$ToNative(ffi.Allocator allocator, BindGroupLayoutDescriptor value) {
   final ptr = allocator<bindings.WGPUBindGroupLayoutDescriptor>();
@@ -1837,9 +1787,6 @@ BindGroupLayoutDescriptor _BindGroupLayoutDescriptor$FromNative(bindings.WGPUBin
   );
 }
 
-
-const BlendComponent _$BlendComponent$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUBlendComponent> _BlendComponent$ToNative(ffi.Allocator allocator, BlendComponent value) {
   final ptr = allocator<bindings.WGPUBlendComponent>();
@@ -1960,10 +1907,6 @@ ConstantEntry _ConstantEntry$FromNative(bindings.WGPUConstantEntry str, {bool bo
 }
 
 
-const CommandBufferDescriptor _$CommandBufferDescriptor$Zero = .new(
-  label: null,
-);
-
 ffi.Pointer<bindings.WGPUCommandBufferDescriptor> _CommandBufferDescriptor$ToNative(ffi.Allocator allocator, CommandBufferDescriptor value) {
   final ptr = allocator<bindings.WGPUCommandBufferDescriptor>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -1979,10 +1922,6 @@ CommandBufferDescriptor _CommandBufferDescriptor$FromNative(bindings.WGPUCommand
   );
 }
 
-
-const CommandEncoderDescriptor _$CommandEncoderDescriptor$Zero = .new(
-  label: null,
-);
 
 ffi.Pointer<bindings.WGPUCommandEncoderDescriptor> _CommandEncoderDescriptor$ToNative(ffi.Allocator allocator, CommandEncoderDescriptor value) {
   final ptr = allocator<bindings.WGPUCommandEncoderDescriptor>();
@@ -2100,11 +2039,6 @@ DawnCompilationMessageUtf16 _DawnCompilationMessageUtf16$FromNative(bindings.WGP
 }
 
 
-const ComputePassDescriptor _$ComputePassDescriptor$Zero = .new(
-  label: null,
-  timestampWrites: null,
-);
-
 ffi.Pointer<bindings.WGPUComputePassDescriptor> _ComputePassDescriptor$ToNative(ffi.Allocator allocator, ComputePassDescriptor value) {
   final ptr = allocator<bindings.WGPUComputePassDescriptor>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -2156,12 +2090,6 @@ final class const CopyTextureForBrowserOptions({
   final bool internalUsage = false,
   super.next,
 }) extends ExtensibleStruct;
-
-const CopyTextureForBrowserOptions _$CopyTextureForBrowserOptions$Zero = .new(
-  srcTransferFunctionParameters: null,
-  conversionMatrix: null,
-  dstTransferFunctionParameters: null,
-);
 
 ffi.Pointer<bindings.WGPUCopyTextureForBrowserOptions> _CopyTextureForBrowserOptions$ToNative(ffi.Allocator allocator, CopyTextureForBrowserOptions value) {
   final ptr = allocator<bindings.WGPUCopyTextureForBrowserOptions>();
@@ -2251,10 +2179,6 @@ final class const AHardwareBufferProperties({
   final YCbCrVkDescriptor yCbCrInfo = const .new(),
 });
 
-const AHardwareBufferProperties _$AHardwareBufferProperties$Zero = .new(
-  yCbCrInfo: _$YCbCrVkDescriptor$Zero,
-);
-
 ffi.Pointer<bindings.WGPUAHardwareBufferProperties> _AHardwareBufferProperties$ToNative(ffi.Allocator allocator, AHardwareBufferProperties value) {
   final ptr = allocator<bindings.WGPUAHardwareBufferProperties>();
   ptr.ref.yCbCrInfo = _YCbCrVkDescriptor$ToNative(allocator, value.yCbCrInfo).ref;
@@ -2268,41 +2192,6 @@ AHardwareBufferProperties _AHardwareBufferProperties$FromNative(bindings.WGPUAHa
   );
 }
 
-
-const Limits _$Limits$Zero = .new(
-  maxTextureDimension1D: 0,
-  maxTextureDimension2D: 0,
-  maxTextureDimension3D: 0,
-  maxTextureArrayLayers: 0,
-  maxBindGroups: 0,
-  maxBindGroupsPlusVertexBuffers: 0,
-  maxBindingsPerBindGroup: 0,
-  maxDynamicUniformBuffersPerPipelineLayout: 0,
-  maxDynamicStorageBuffersPerPipelineLayout: 0,
-  maxSampledTexturesPerShaderStage: 0,
-  maxSamplersPerShaderStage: 0,
-  maxStorageBuffersPerShaderStage: 0,
-  maxStorageTexturesPerShaderStage: 0,
-  maxUniformBuffersPerShaderStage: 0,
-  maxUniformBufferBindingSize: 0,
-  maxStorageBufferBindingSize: 0,
-  minUniformBufferOffsetAlignment: 0,
-  minStorageBufferOffsetAlignment: 0,
-  maxVertexBuffers: 0,
-  maxBufferSize: 0,
-  maxVertexAttributes: 0,
-  maxVertexBufferArrayStride: 0,
-  maxInterStageShaderVariables: 0,
-  maxColorAttachments: 0,
-  maxColorAttachmentBytesPerSample: 0,
-  maxComputeWorkgroupStorageSize: 0,
-  maxComputeInvocationsPerWorkgroup: 0,
-  maxComputeWorkgroupSizeX: 0,
-  maxComputeWorkgroupSizeY: 0,
-  maxComputeWorkgroupSizeZ: 0,
-  maxComputeWorkgroupsPerDimension: 0,
-  maxImmediateSize: 0,
-);
 
 ffi.Pointer<bindings.WGPULimits> _Limits$ToNative(ffi.Allocator allocator, Limits value) {
   final ptr = allocator<bindings.WGPULimits>();
@@ -2415,13 +2304,6 @@ Limits _Limits$FromNative(bindings.WGPULimits str, {bool borrowed = false}) {
 
 
 
-const CompatibilityModeLimits _$CompatibilityModeLimits$Zero = .new(
-  maxStorageBuffersInVertexStage: 0,
-  maxStorageTexturesInVertexStage: 0,
-  maxStorageBuffersInFragmentStage: 0,
-  maxStorageTexturesInFragmentStage: 0,
-);
-
 ffi.Pointer<bindings.WGPUCompatibilityModeLimits> _CompatibilityModeLimits$ToNative(ffi.Allocator allocator, CompatibilityModeLimits value) {
   final ptr = allocator<bindings.WGPUCompatibilityModeLimits>();
   ptr.ref.chain.sType = value.sType.value;
@@ -2455,10 +2337,6 @@ final class const DawnTexelCopyBufferRowAlignmentLimits({
   SType get sType => .dawnTexelCopyBufferRowAlignmentLimits;
 }
 
-const DawnTexelCopyBufferRowAlignmentLimits _$DawnTexelCopyBufferRowAlignmentLimits$Zero = .new(
-  minTexelCopyBufferRowAlignment: 0,
-);
-
 ffi.Pointer<bindings.WGPUDawnTexelCopyBufferRowAlignmentLimits> _DawnTexelCopyBufferRowAlignmentLimits$ToNative(ffi.Allocator allocator, DawnTexelCopyBufferRowAlignmentLimits value) {
   final ptr = allocator<bindings.WGPUDawnTexelCopyBufferRowAlignmentLimits>();
   ptr.ref.chain.sType = value.sType.value;
@@ -2482,10 +2360,6 @@ final class const DawnHostMappedPointerLimits({
   @override
   SType get sType => .dawnHostMappedPointerLimits;
 }
-
-const DawnHostMappedPointerLimits _$DawnHostMappedPointerLimits$Zero = .new(
-  hostMappedPointerAlignment: 0,
-);
 
 ffi.Pointer<bindings.WGPUDawnHostMappedPointerLimits> _DawnHostMappedPointerLimits$ToNative(ffi.Allocator allocator, DawnHostMappedPointerLimits value) {
   final ptr = allocator<bindings.WGPUDawnHostMappedPointerLimits>();
@@ -2855,10 +2729,6 @@ final class const SharedBufferMemoryDescriptor({
   super.next,
 }) extends ExtensibleStruct;
 
-const SharedBufferMemoryDescriptor _$SharedBufferMemoryDescriptor$Zero = .new(
-  label: null,
-);
-
 ffi.Pointer<bindings.WGPUSharedBufferMemoryDescriptor> _SharedBufferMemoryDescriptor$ToNative(ffi.Allocator allocator, SharedBufferMemoryDescriptor value) {
   final ptr = allocator<bindings.WGPUSharedBufferMemoryDescriptor>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -2970,10 +2840,6 @@ final class const SharedTextureMemoryAHardwareBufferProperties({
   SType get sType => .sharedTextureMemoryAHardwareBufferProperties;
 }
 
-const SharedTextureMemoryAHardwareBufferProperties _$SharedTextureMemoryAHardwareBufferProperties$Zero = .new(
-  yCbCrInfo: _$YCbCrVkDescriptor$Zero,
-);
-
 ffi.Pointer<bindings.WGPUSharedTextureMemoryAHardwareBufferProperties> _SharedTextureMemoryAHardwareBufferProperties$ToNative(ffi.Allocator allocator, SharedTextureMemoryAHardwareBufferProperties value) {
   final ptr = allocator<bindings.WGPUSharedTextureMemoryAHardwareBufferProperties>();
   ptr.ref.chain.sType = value.sType.value;
@@ -2994,10 +2860,6 @@ final class const SharedTextureMemoryDescriptor({
   final String? label,
   super.next,
 }) extends ExtensibleStruct;
-
-const SharedTextureMemoryDescriptor _$SharedTextureMemoryDescriptor$Zero = .new(
-  label: null,
-);
 
 ffi.Pointer<bindings.WGPUSharedTextureMemoryDescriptor> _SharedTextureMemoryDescriptor$ToNative(ffi.Allocator allocator, SharedTextureMemoryDescriptor value) {
   final ptr = allocator<bindings.WGPUSharedTextureMemoryDescriptor>();
@@ -3672,9 +3534,6 @@ final class const SharedTextureMemoryD3DSwapchainBeginState({
   SType get sType => .sharedTextureMemoryD3DSwapchainBeginState;
 }
 
-const SharedTextureMemoryD3DSwapchainBeginState _$SharedTextureMemoryD3DSwapchainBeginState$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUSharedTextureMemoryD3DSwapchainBeginState> _SharedTextureMemoryD3DSwapchainBeginState$ToNative(ffi.Allocator allocator, SharedTextureMemoryD3DSwapchainBeginState value) {
   final ptr = allocator<bindings.WGPUSharedTextureMemoryD3DSwapchainBeginState>();
   ptr.ref.chain.sType = value.sType.value;
@@ -3699,9 +3558,6 @@ final class const SharedTextureMemoryD3D11BeginState({
   SType get sType => .sharedTextureMemoryD3D11BeginState;
 }
 
-const SharedTextureMemoryD3D11BeginState _$SharedTextureMemoryD3D11BeginState$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUSharedTextureMemoryD3D11BeginState> _SharedTextureMemoryD3D11BeginState$ToNative(ffi.Allocator allocator, SharedTextureMemoryD3D11BeginState value) {
   final ptr = allocator<bindings.WGPUSharedTextureMemoryD3D11BeginState>();
   ptr.ref.chain.sType = value.sType.value;
@@ -3722,10 +3578,6 @@ final class const SharedFenceDescriptor({
   final String? label,
   super.next,
 }) extends ExtensibleStruct;
-
-const SharedFenceDescriptor _$SharedFenceDescriptor$Zero = .new(
-  label: null,
-);
 
 ffi.Pointer<bindings.WGPUSharedFenceDescriptor> _SharedFenceDescriptor$ToNative(ffi.Allocator allocator, SharedFenceDescriptor value) {
   final ptr = allocator<bindings.WGPUSharedFenceDescriptor>();
@@ -3925,9 +3777,6 @@ final class const DawnFakeDeviceInitializeErrorForTesting({
   SType get sType => .dawnFakeDeviceInitializeErrorForTesting;
 }
 
-const DawnFakeDeviceInitializeErrorForTesting _$DawnFakeDeviceInitializeErrorForTesting$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUDawnFakeDeviceInitializeErrorForTesting> _DawnFakeDeviceInitializeErrorForTesting$ToNative(ffi.Allocator allocator, DawnFakeDeviceInitializeErrorForTesting value) {
   final ptr = allocator<bindings.WGPUDawnFakeDeviceInitializeErrorForTesting>();
   ptr.ref.chain.sType = value.sType.value;
@@ -4109,9 +3958,6 @@ final class const DawnFormatCapabilities({
   super.next,
 }) extends ExtensibleStruct;
 
-const DawnFormatCapabilities _$DawnFormatCapabilities$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUDawnFormatCapabilities> _DawnFormatCapabilities$ToNative(ffi.Allocator allocator, DawnFormatCapabilities value) {
   final ptr = allocator<bindings.WGPUDawnFormatCapabilities>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -4207,11 +4053,6 @@ TexelCopyBufferInfo _TexelCopyBufferInfo$FromNative(bindings.WGPUTexelCopyBuffer
   );
 }
 
-
-const TexelCopyBufferLayout _$TexelCopyBufferLayout$Zero = .new(
-  bytesPerRow: 0,
-  rowsPerImage: 0,
-);
 
 ffi.Pointer<bindings.WGPUTexelCopyBufferLayout> _TexelCopyBufferLayout$ToNative(ffi.Allocator allocator, TexelCopyBufferLayout value) {
   final ptr = allocator<bindings.WGPUTexelCopyBufferLayout>();
@@ -4315,9 +4156,6 @@ FutureWaitInfo _FutureWaitInfo$FromNative(bindings.WGPUFutureWaitInfo str, {bool
 }
 
 
-const InstanceLimits _$InstanceLimits$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUInstanceLimits> _InstanceLimits$ToNative(ffi.Allocator allocator, InstanceLimits value) {
   final ptr = allocator<bindings.WGPUInstanceLimits>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -4333,11 +4171,6 @@ InstanceLimits _InstanceLimits$FromNative(bindings.WGPUInstanceLimits str, {bool
   );
 }
 
-
-const InstanceDescriptor _$InstanceDescriptor$Zero = .new(
-  requiredFeatures: null,
-  requiredLimits: null,
-);
 
 ffi.Pointer<bindings.WGPUInstanceDescriptor> _InstanceDescriptor$ToNative(ffi.Allocator allocator, InstanceDescriptor value) {
   final ptr = allocator<bindings.WGPUInstanceDescriptor>();
@@ -4388,9 +4221,6 @@ final class const DawnWireWGSLControl({
   SType get sType => .dawnWireWGSLControl;
 }
 
-const DawnWireWGSLControl _$DawnWireWGSLControl$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUDawnWireWGSLControl> _DawnWireWGSLControl$ToNative(ffi.Allocator allocator, DawnWireWGSLControl value) {
   final ptr = allocator<bindings.WGPUDawnWireWGSLControl>();
   ptr.ref.chain.sType = value.sType.value;
@@ -4420,9 +4250,6 @@ final class const DawnInjectedInvalidSType({
   @override
   SType get sType => .dawnInjectedInvalidSType;
 }
-
-const DawnInjectedInvalidSType _$DawnInjectedInvalidSType$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUDawnInjectedInvalidSType> _DawnInjectedInvalidSType$ToNative(ffi.Allocator allocator, DawnInjectedInvalidSType value) {
   final ptr = allocator<bindings.WGPUDawnInjectedInvalidSType>();
@@ -4506,9 +4333,6 @@ VertexBufferLayout _VertexBufferLayout$FromNative(bindings.WGPUVertexBufferLayou
 }
 
 
-const Origin3D _$Origin3D$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUOrigin3D> _Origin3D$ToNative(ffi.Allocator allocator, Origin3D value) {
   final ptr = allocator<bindings.WGPUOrigin3D>();
   ptr.ref.x = value.x;
@@ -4532,9 +4356,6 @@ final class const Origin2D({
   final int x = 0,
   final int y = 0,
 });
-
-const Origin2D _$Origin2D$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUOrigin2D> _Origin2D$ToNative(ffi.Allocator allocator, Origin2D value) {
   final ptr = allocator<bindings.WGPUOrigin2D>();
@@ -4581,9 +4402,6 @@ final class const PipelineLayoutResourceTable({
   @override
   SType get sType => .pipelineLayoutResourceTable;
 }
-
-const PipelineLayoutResourceTable _$PipelineLayoutResourceTable$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUPipelineLayoutResourceTable> _PipelineLayoutResourceTable$ToNative(ffi.Allocator allocator, PipelineLayoutResourceTable value) {
   final ptr = allocator<bindings.WGPUPipelineLayoutResourceTable>();
@@ -4699,9 +4517,6 @@ final class const PipelineLayoutStorageAttachment({
   super.next,
 }) extends ExtensibleStruct;
 
-const PipelineLayoutStorageAttachment _$PipelineLayoutStorageAttachment$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUPipelineLayoutStorageAttachment> _PipelineLayoutStorageAttachment$ToNative(ffi.Allocator allocator, PipelineLayoutStorageAttachment value) {
   final ptr = allocator<bindings.WGPUPipelineLayoutStorageAttachment>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -4786,10 +4601,6 @@ QuerySetDescriptor _QuerySetDescriptor$FromNative(bindings.WGPUQuerySetDescripto
 }
 
 
-const QueueDescriptor _$QueueDescriptor$Zero = .new(
-  label: null,
-);
-
 ffi.Pointer<bindings.WGPUQueueDescriptor> _QueueDescriptor$ToNative(ffi.Allocator allocator, QueueDescriptor value) {
   final ptr = allocator<bindings.WGPUQueueDescriptor>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -4805,10 +4616,6 @@ QueueDescriptor _QueueDescriptor$FromNative(bindings.WGPUQueueDescriptor str, {b
   );
 }
 
-
-const RenderBundleDescriptor _$RenderBundleDescriptor$Zero = .new(
-  label: null,
-);
 
 ffi.Pointer<bindings.WGPURenderBundleDescriptor> _RenderBundleDescriptor$ToNative(ffi.Allocator allocator, RenderBundleDescriptor value) {
   final ptr = allocator<bindings.WGPURenderBundleDescriptor>();
@@ -4884,9 +4691,6 @@ final class const RenderBundleEncoderResourceTable({
   @override
   SType get sType => .renderBundleEncoderResourceTable;
 }
-
-const RenderBundleEncoderResourceTable _$RenderBundleEncoderResourceTable$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPURenderBundleEncoderResourceTable> _RenderBundleEncoderResourceTable$ToNative(ffi.Allocator allocator, RenderBundleEncoderResourceTable value) {
   final ptr = allocator<bindings.WGPURenderBundleEncoderResourceTable>();
@@ -5032,9 +4836,6 @@ final class const DawnRenderPassSampleCount({
   SType get sType => .dawnRenderPassSampleCount;
 }
 
-const DawnRenderPassSampleCount _$DawnRenderPassSampleCount$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUDawnRenderPassSampleCount> _DawnRenderPassSampleCount$ToNative(ffi.Allocator allocator, DawnRenderPassSampleCount value) {
   final ptr = allocator<bindings.WGPUDawnRenderPassSampleCount>();
   ptr.ref.chain.sType = value.sType.value;
@@ -5051,9 +4852,6 @@ DawnRenderPassSampleCount _DawnRenderPassSampleCount$FromNative(bindings.WGPUDaw
   );
 }
 
-
-const RenderPassMaxDrawCount _$RenderPassMaxDrawCount$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPURenderPassMaxDrawCount> _RenderPassMaxDrawCount$ToNative(ffi.Allocator allocator, RenderPassMaxDrawCount value) {
   final ptr = allocator<bindings.WGPURenderPassMaxDrawCount>();
@@ -5296,9 +5094,6 @@ VertexState _VertexState$FromNative(bindings.WGPUVertexState str, {bool borrowed
 }
 
 
-const PrimitiveState _$PrimitiveState$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUPrimitiveState> _PrimitiveState$ToNative(ffi.Allocator allocator, PrimitiveState value) {
   final ptr = allocator<bindings.WGPUPrimitiveState>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -5326,11 +5121,6 @@ PrimitiveState _PrimitiveState$FromNative(bindings.WGPUPrimitiveState str, {bool
   );
 }
 
-
-const DepthStencilState _$DepthStencilState$Zero = .new(
-  stencilFront: _$StencilFaceState$Zero,
-  stencilBack: _$StencilFaceState$Zero,
-);
 
 ffi.Pointer<bindings.WGPUDepthStencilState> _DepthStencilState$ToNative(ffi.Allocator allocator, DepthStencilState value) {
   final ptr = allocator<bindings.WGPUDepthStencilState>();
@@ -5374,9 +5164,6 @@ DepthStencilState _DepthStencilState$FromNative(bindings.WGPUDepthStencilState s
   );
 }
 
-
-const MultisampleState _$MultisampleState$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUMultisampleState> _MultisampleState$ToNative(ffi.Allocator allocator, MultisampleState value) {
   final ptr = allocator<bindings.WGPUMultisampleState>();
@@ -5467,10 +5254,6 @@ FragmentState _FragmentState$FromNative(bindings.WGPUFragmentState str, {bool bo
 }
 
 
-const ColorTargetState _$ColorTargetState$Zero = .new(
-  blend: null,
-);
-
 ffi.Pointer<bindings.WGPUColorTargetState> _ColorTargetState$ToNative(ffi.Allocator allocator, ColorTargetState value) {
   final ptr = allocator<bindings.WGPUColorTargetState>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -5500,9 +5283,6 @@ final class const ColorTargetStateExpandResolveTextureDawn({
   SType get sType => .colorTargetStateExpandResolveTextureDawn;
 }
 
-const ColorTargetStateExpandResolveTextureDawn _$ColorTargetStateExpandResolveTextureDawn$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUColorTargetStateExpandResolveTextureDawn> _ColorTargetStateExpandResolveTextureDawn$ToNative(ffi.Allocator allocator, ColorTargetStateExpandResolveTextureDawn value) {
   final ptr = allocator<bindings.WGPUColorTargetStateExpandResolveTextureDawn>();
   ptr.ref.chain.sType = value.sType.value;
@@ -5519,11 +5299,6 @@ ColorTargetStateExpandResolveTextureDawn _ColorTargetStateExpandResolveTextureDa
   );
 }
 
-
-const BlendState _$BlendState$Zero = .new(
-  color: _$BlendComponent$Zero,
-  alpha: _$BlendComponent$Zero,
-);
 
 ffi.Pointer<bindings.WGPUBlendState> _BlendState$ToNative(ffi.Allocator allocator, BlendState value) {
   final ptr = allocator<bindings.WGPUBlendState>();
@@ -5608,13 +5383,6 @@ final class const BindingResource({
   super.next,
 }) extends ExtensibleStruct;
 
-const BindingResource _$BindingResource$Zero = .new(
-  buffer: null,
-  size: 0,
-  sampler: null,
-  textureView: null,
-);
-
 ffi.Pointer<bindings.WGPUBindingResource> _BindingResource$ToNative(ffi.Allocator allocator, BindingResource value) {
   final ptr = allocator<bindings.WGPUBindingResource>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -5642,10 +5410,6 @@ BindingResource _BindingResource$FromNative(bindings.WGPUBindingResource str, {b
   );
 }
 
-
-const SamplerDescriptor _$SamplerDescriptor$Zero = .new(
-  label: null,
-);
 
 ffi.Pointer<bindings.WGPUSamplerDescriptor> _SamplerDescriptor$ToNative(ffi.Allocator allocator, SamplerDescriptor value) {
   final ptr = allocator<bindings.WGPUSamplerDescriptor>();
@@ -5692,10 +5456,6 @@ SamplerDescriptor _SamplerDescriptor$FromNative(bindings.WGPUSamplerDescriptor s
   );
 }
 
-
-const ShaderModuleDescriptor _$ShaderModuleDescriptor$Zero = .new(
-  label: null,
-);
 
 ffi.Pointer<bindings.WGPUShaderModuleDescriptor> _ShaderModuleDescriptor$ToNative(ffi.Allocator allocator, ShaderModuleDescriptor value) {
   final ptr = allocator<bindings.WGPUShaderModuleDescriptor>();
@@ -5824,9 +5584,6 @@ final class const DawnShaderModuleSPIRVOptionsDescriptor({
   SType get sType => .dawnShaderModuleSPIRVOptionsDescriptor;
 }
 
-const DawnShaderModuleSPIRVOptionsDescriptor _$DawnShaderModuleSPIRVOptionsDescriptor$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUDawnShaderModuleSPIRVOptionsDescriptor> _DawnShaderModuleSPIRVOptionsDescriptor$ToNative(ffi.Allocator allocator, DawnShaderModuleSPIRVOptionsDescriptor value) {
   final ptr = allocator<bindings.WGPUDawnShaderModuleSPIRVOptionsDescriptor>();
   ptr.ref.chain.sType = value.sType.value;
@@ -5868,9 +5625,6 @@ ShaderModuleCompilationOptions _ShaderModuleCompilationOptions$FromNative(bindin
 }
 
 
-const StencilFaceState _$StencilFaceState$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUStencilFaceState> _StencilFaceState$ToNative(ffi.Allocator allocator, StencilFaceState value) {
   final ptr = allocator<bindings.WGPUStencilFaceState>();
   ptr.ref.compare = value.compare.value;
@@ -5893,10 +5647,6 @@ StencilFaceState _StencilFaceState$FromNative(bindings.WGPUStencilFaceState str,
   );
 }
 
-
-const SurfaceDescriptor _$SurfaceDescriptor$Zero = .new(
-  label: null,
-);
 
 ffi.Pointer<bindings.WGPUSurfaceDescriptor> _SurfaceDescriptor$ToNative(ffi.Allocator allocator, SurfaceDescriptor value) {
   final ptr = allocator<bindings.WGPUSurfaceDescriptor>();
@@ -6260,9 +6010,6 @@ TextureDescriptor _TextureDescriptor$FromNative(bindings.WGPUTextureDescriptor s
 }
 
 
-const TextureBindingViewDimension _$TextureBindingViewDimension$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUTextureBindingViewDimension> _TextureBindingViewDimension$ToNative(ffi.Allocator allocator, TextureBindingViewDimension value) {
   final ptr = allocator<bindings.WGPUTextureBindingViewDimension>();
   ptr.ref.chain.sType = value.sType.value;
@@ -6279,12 +6026,6 @@ TextureBindingViewDimension _TextureBindingViewDimension$FromNative(bindings.WGP
   );
 }
 
-
-const TextureViewDescriptor _$TextureViewDescriptor$Zero = .new(
-  label: null,
-  mipLevelCount: 0,
-  arrayLayerCount: 0,
-);
 
 ffi.Pointer<bindings.WGPUTextureViewDescriptor> _TextureViewDescriptor$ToNative(ffi.Allocator allocator, TextureViewDescriptor value) {
   final ptr = allocator<bindings.WGPUTextureViewDescriptor>();
@@ -6333,11 +6074,6 @@ final class const TexelBufferViewDescriptor({
   super.next,
 }) extends ExtensibleStruct;
 
-const TexelBufferViewDescriptor _$TexelBufferViewDescriptor$Zero = .new(
-  label: null,
-  size: 0,
-);
-
 ffi.Pointer<bindings.WGPUTexelBufferViewDescriptor> _TexelBufferViewDescriptor$ToNative(ffi.Allocator allocator, TexelBufferViewDescriptor value) {
   final ptr = allocator<bindings.WGPUTexelBufferViewDescriptor>();
   ptr.ref.nextInChain = _ChainedStruct$ToNative(allocator, value.next).cast();
@@ -6363,10 +6099,6 @@ TexelBufferViewDescriptor _TexelBufferViewDescriptor$FromNative(bindings.WGPUTex
 }
 
 
-const TextureComponentSwizzleDescriptor _$TextureComponentSwizzleDescriptor$Zero = .new(
-  swizzle: _$TextureComponentSwizzle$Zero,
-);
-
 ffi.Pointer<bindings.WGPUTextureComponentSwizzleDescriptor> _TextureComponentSwizzleDescriptor$ToNative(ffi.Allocator allocator, TextureComponentSwizzleDescriptor value) {
   final ptr = allocator<bindings.WGPUTextureComponentSwizzleDescriptor>();
   ptr.ref.chain.sType = value.sType.value;
@@ -6383,9 +6115,6 @@ TextureComponentSwizzleDescriptor _TextureComponentSwizzleDescriptor$FromNative(
   );
 }
 
-
-const TextureComponentSwizzle _$TextureComponentSwizzle$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUTextureComponentSwizzle> _TextureComponentSwizzle$ToNative(ffi.Allocator allocator, TextureComponentSwizzle value) {
   final ptr = allocator<bindings.WGPUTextureComponentSwizzle>();
@@ -6427,9 +6156,6 @@ final class const YCbCrVkDescriptor({
   @override
   SType get sType => .yCbCrVkDescriptor;
 }
-
-const YCbCrVkDescriptor _$YCbCrVkDescriptor$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUYCbCrVkDescriptor> _YCbCrVkDescriptor$ToNative(ffi.Allocator allocator, YCbCrVkDescriptor value) {
   final ptr = allocator<bindings.WGPUYCbCrVkDescriptor>();
@@ -6488,9 +6214,6 @@ final class const DawnTextureInternalUsageDescriptor({
   SType get sType => .dawnTextureInternalUsageDescriptor;
 }
 
-const DawnTextureInternalUsageDescriptor _$DawnTextureInternalUsageDescriptor$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUDawnTextureInternalUsageDescriptor> _DawnTextureInternalUsageDescriptor$ToNative(ffi.Allocator allocator, DawnTextureInternalUsageDescriptor value) {
   final ptr = allocator<bindings.WGPUDawnTextureInternalUsageDescriptor>();
   ptr.ref.chain.sType = value.sType.value;
@@ -6515,9 +6238,6 @@ final class const DawnEncoderInternalUsageDescriptor({
   SType get sType => .dawnEncoderInternalUsageDescriptor;
 }
 
-const DawnEncoderInternalUsageDescriptor _$DawnEncoderInternalUsageDescriptor$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUDawnEncoderInternalUsageDescriptor> _DawnEncoderInternalUsageDescriptor$ToNative(ffi.Allocator allocator, DawnEncoderInternalUsageDescriptor value) {
   final ptr = allocator<bindings.WGPUDawnEncoderInternalUsageDescriptor>();
   ptr.ref.chain.sType = value.sType.value;
@@ -6541,9 +6261,6 @@ final class const DawnAdapterPropertiesPowerPreference({
   @override
   SType get sType => .dawnAdapterPropertiesPowerPreference;
 }
-
-const DawnAdapterPropertiesPowerPreference _$DawnAdapterPropertiesPowerPreference$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUDawnAdapterPropertiesPowerPreference> _DawnAdapterPropertiesPowerPreference$ToNative(ffi.Allocator allocator, DawnAdapterPropertiesPowerPreference value) {
   final ptr = allocator<bindings.WGPUDawnAdapterPropertiesPowerPreference>();
@@ -6696,9 +6413,6 @@ final class const AdapterPropertiesDrm({
   SType get sType => .adapterPropertiesDrm;
 }
 
-const AdapterPropertiesDrm _$AdapterPropertiesDrm$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUAdapterPropertiesDrm> _AdapterPropertiesDrm$ToNative(ffi.Allocator allocator, AdapterPropertiesDrm value) {
   final ptr = allocator<bindings.WGPUAdapterPropertiesDrm>();
   ptr.ref.chain.sType = value.sType.value;
@@ -6738,9 +6452,6 @@ final class const AdapterPropertiesWGPU({
   SType get sType => .adapterPropertiesWGPU;
 }
 
-const AdapterPropertiesWGPU _$AdapterPropertiesWGPU$Zero = .new(
-);
-
 ffi.Pointer<bindings.WGPUAdapterPropertiesWGPU> _AdapterPropertiesWGPU$ToNative(ffi.Allocator allocator, AdapterPropertiesWGPU value) {
   final ptr = allocator<bindings.WGPUAdapterPropertiesWGPU>();
   ptr.ref.chain.sType = value.sType.value;
@@ -6764,9 +6475,6 @@ final class const DawnBufferDescriptorErrorInfoFromWireClient({
   @override
   SType get sType => .dawnBufferDescriptorErrorInfoFromWireClient;
 }
-
-const DawnBufferDescriptorErrorInfoFromWireClient _$DawnBufferDescriptorErrorInfoFromWireClient$Zero = .new(
-);
 
 ffi.Pointer<bindings.WGPUDawnBufferDescriptorErrorInfoFromWireClient> _DawnBufferDescriptorErrorInfoFromWireClient$ToNative(ffi.Allocator allocator, DawnBufferDescriptorErrorInfoFromWireClient value) {
   final ptr = allocator<bindings.WGPUDawnBufferDescriptorErrorInfoFromWireClient>();
@@ -9330,15 +9038,10 @@ ffi.Pointer<bindings.WGPUCreateRenderPipelineAsyncCallbackInfo> _CreateRenderPip
   return info;
 }
 
-typedef _DeviceLostCallback = void Function(List<Device> device, DeviceLostReason reason, String message);
+typedef _DeviceLostCallback = void Function(Device device, DeviceLostReason reason, String message);
 
 void _DeviceLostCallback$Trampoline(ffi.Pointer<ffi.Pointer<bindings.WGPUDeviceImpl>> device, int reason, bindings.WGPUStringView message, ffi.Pointer<ffi.Void> userdata1, ffi.Pointer<ffi.Void> userdata2) {
-  final _device = <Device>[];
-  if (device != ffi.nullptr && 1 > 0) {
-    for (var i = 0; i < 1; i++) {
-      _device.add(_Device$FromPointer(device[i]));
-    }
-  }
+  final _device = _Device$FromPointer(device.value, borrowed: true);
   final _reason = _DeviceLostReason$FromValue(reason);
   final _message = message.toDartString();
   final handle = _DeviceLostCallback$Registry.instance.take(userdata1);
@@ -9371,15 +9074,10 @@ ffi.Pointer<bindings.WGPUDeviceLostCallbackInfo> _DeviceLostCallback$ToInfo(ffi.
   return info;
 }
 
-typedef _UncapturedErrorCallback = void Function(List<Device> device, ErrorType type, String message);
+typedef _UncapturedErrorCallback = void Function(Device device, ErrorType type, String message);
 
 void _UncapturedErrorCallback$Trampoline(ffi.Pointer<ffi.Pointer<bindings.WGPUDeviceImpl>> device, int type, bindings.WGPUStringView message, ffi.Pointer<ffi.Void> userdata1, ffi.Pointer<ffi.Void> userdata2) {
-  final _device = <Device>[];
-  if (device != ffi.nullptr && 1 > 0) {
-    for (var i = 0; i < 1; i++) {
-      _device.add(_Device$FromPointer(device[i]));
-    }
-  }
+  final _device = _Device$FromPointer(device.value, borrowed: true);
   final _type = _ErrorType$FromValue(type);
   final _message = message.toDartString();
   final handle = _UncapturedErrorCallback$Registry.instance.take(userdata1);

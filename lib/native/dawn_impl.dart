@@ -39,8 +39,17 @@ final class Adapter extends _AdapterBase implements webgpu.Adapter {
   }
 
   @override
-  Future<Device> requestDefaultDevice() {
-    return requestDevice(platformDeviceDescriptor);
+  Future<Device> requestDefaultDevice([DeviceDescriptor? descriptor]) {
+    final totalDescriptor = DeviceDescriptor(
+      label: descriptor?.label,
+      defaultQueue: descriptor?.defaultQueue ?? .new(),
+      requiredFeatures: [...?descriptor?.requiredFeatures, ...?platformDeviceDescriptor.requiredFeatures],
+      requiredLimits: descriptor?.requiredLimits,
+      deviceLostCallback: descriptor?.deviceLostCallback,
+      uncapturedErrorCallback: descriptor?.uncapturedErrorCallback,
+    );
+
+    return requestDevice(totalDescriptor);
   }
 }
 
@@ -307,8 +316,11 @@ final class ComputePipeline extends _ComputePipelineBase implements webgpu.Compu
   set label(String value) => _setLabel(value);
 }
 
-final class Device extends _DeviceBase implements webgpu.Device {
-  Device._(super.ptr) : super._();
+final class Device extends _DeviceBase with _CallbackHandleHolder implements webgpu.Device {
+  Device._(super.ptr) : super._() {
+    _takeCallbacks();
+  }
+
   Device._borrowed(super.ptr) : super._borrowed();
 
   @override
@@ -429,6 +441,12 @@ final class Device extends _DeviceBase implements webgpu.Device {
   @override
   void destroy() {
     _destroy();
+  }
+
+  @override
+  void dispose() {
+    _releaseCallbacks();
+    super.dispose();
   }
 }
 

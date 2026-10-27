@@ -4309,9 +4309,9 @@ typedef CreateComputePipelineAsyncCallback = void Function(CreatePipelineAsyncSt
 
 typedef CreateRenderPipelineAsyncCallback = void Function(CreatePipelineAsyncStatus status, RenderPipeline? pipeline, String message);
 
-typedef DeviceLostCallback = void Function(List<Device> device, DeviceLostReason reason, String message);
+typedef DeviceLostCallback = void Function(Device device, DeviceLostReason reason, String message);
 
-typedef UncapturedErrorCallback = void Function(List<Device> device, ErrorType type, String message);
+typedef UncapturedErrorCallback = void Function(Device device, ErrorType type, String message);
 
 typedef PopErrorScopeCallback = void Function(PopErrorScopeStatus status, ErrorType type, String message);
 

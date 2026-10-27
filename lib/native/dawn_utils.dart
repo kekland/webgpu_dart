@@ -168,3 +168,15 @@ final class _EventLoop {
     return c.value;
   }
 }
+
+mixin _CallbackHandleHolder {
+  void _takeCallbacks() {
+    _callbackHandles.addAll(_usingCallbackHandles);
+  }
+
+  final _callbackHandles = <_CallbackHandle>[];
+
+  void _releaseCallbacks() {
+    _callbackHandles.clear();
+  }
+}

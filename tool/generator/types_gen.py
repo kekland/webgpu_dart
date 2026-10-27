@@ -268,10 +268,11 @@ def parse_type(member: dict) -> Type:
     print(f'warning(type): void type without pointer {type_name}')
 
   if member.get('length') is not None:
-    inner = result
-    inner.pointer -= 1
-    if inner.is_void: inner.kind = TypeKind.VOID_DATA
-    result = Type(kind=TypeKind.ARRAY, array_inner=inner, array_length=member['length'], pointer=1, pointer_kind=inner.pointer_kind)
+    if isinstance(member['length'], str) or member['length'] > 1:
+      inner = result
+      inner.pointer -= 1
+      if inner.is_void: inner.kind = TypeKind.VOID_DATA
+      result = Type(kind=TypeKind.ARRAY, array_inner=inner, array_length=member['length'], pointer=1, pointer_kind=inner.pointer_kind)
 
   if member.get('optional') == True: result.is_nullable = True
   if member.get('default') == 'NAN': result.is_nullable = True
@@ -568,6 +569,9 @@ def type_set_native(type: Type, dest: str, expr: str, default: Optional[str] = N
 
   if d is not None:
     if d == 'nullptr': return [f'{dest} = {type_to_native(type, expr)};']
+    if d == 'zero' and type.is_struct:
+      return [f'if ({expr} != null) {dest} = {type_to_native(type, promoted_expr)};']
+
     _expr = f'({expr} ?? {d})'
     return [f'{dest} = {type_to_native(type, _expr)};']
 
@@ -600,8 +604,13 @@ def type_from_native(type: Type, expr: str, borrowed_field: Optional[str] = None
   if type.is_future: return f'WGPUFuture(id: {expr}.id)'
 
   if type.is_object:
-    ctor = f'_{type.dart_name}$FromPointer({expr}'
+    _expr = expr
+    if type.is_pointer:
+      _expr = f'{expr}.value'
+
+    ctor = f'_{type.dart_name}$FromPointer({_expr}'
     if borrowed_field is not None: ctor += f', borrowed: {borrowed_field}'
+    elif type.is_pointer and type.pointer_kind == PointerKind.IMMUTABLE: ctor += f', borrowed: true'
     ctor += ')'
 
     if type.is_nullable: return f'{expr} != ffi.nullptr ? {ctor} : null'

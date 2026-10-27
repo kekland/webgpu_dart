@@ -118,7 +118,17 @@ final class WebWebGpuRenderObject extends WebGpuRenderObject {
 
     final texture = webgpu_web.Texture.from(canvasContext.getCurrentTexture());
     final view = texture.createView();
-    renderable.render(view, texture.format, width, height);
+
+    final renderContext = RenderContext(
+      textureView: view,
+      textureFormat: texture.format,
+      textureWidth: width,
+      textureHeight: height,
+      devicePixelRatio: devicePixelRatio,
+      size: size,
+    );
+
+    renderable.performRender(renderContext);
   }
 
   @override

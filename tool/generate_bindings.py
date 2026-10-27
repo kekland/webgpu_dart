@@ -14,5 +14,5 @@ if __name__ == '__main__':
   FFIGEN_PATH = ROOT / 'tool' / 'generator' / '_ffigen.dart'
   GENERATOR_PATH = ROOT / 'tool' / 'generator' / '_generator.py'
 
-  exec_cmd(f'{FFIGEN_PATH}')
+  # exec_cmd(f'{FFIGEN_PATH}')
   exec_cmd(f'{GENERATOR_PATH} --spec-path {DAWN_JSON} --out-impl {OUT_IMPL_PATH} --out-shared {OUT_SHARED_PATH}', cwd=GENERATOR_PATH.parent)

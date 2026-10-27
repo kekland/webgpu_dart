@@ -36,8 +36,8 @@ final class Adapter._(final web.GPUAdapter obj) implements webgpu.Adapter {
   }
 
   @override
-  Future<Device> requestDefaultDevice() async {
-    return requestDevice();
+  Future<Device> requestDefaultDevice([webgpu.DeviceDescriptor? descriptor]) async {
+    return requestDevice(descriptor);
   }
 
   @override

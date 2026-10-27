@@ -26,9 +26,6 @@ abstract class WebGpuRenderObject extends RenderProxyBox {
   webgpu.Device? _device;
   webgpu.Device? get device => _device;
 
-  webgpu.Instance? _instance;
-  webgpu.Instance? get instance => _instance;
-
   double _devicePixelRatio;
   double get devicePixelRatio => _devicePixelRatio;
   set devicePixelRatio(double value) {
@@ -44,11 +41,6 @@ abstract class WebGpuRenderObject extends RenderProxyBox {
   }
 
   void onRenderableUpdated() {
-    if (_instance != _renderable?.instance) {
-      _instance = _renderable?.instance;
-      markNeedsSetup();
-    }
-
     if (_device != _renderable?.device) {
       _device = _renderable?.device;
       markNeedsSetup();
