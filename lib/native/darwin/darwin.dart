@@ -89,6 +89,7 @@ final class MetalFlutterTexture extends FlutterTexture<bindings.mtl_flutter_text
     final fenceExport = fence.exportInfo(extensions: [.sharedFenceMTLSharedEventExportInfo]);
     final metalFenceExport = fenceExport.resolveNext<SharedFenceMTLSharedEventExportInfo>();
     bindings.mtl_flutter_texture_present(_ptr, metalFenceExport.sharedEvent.cast(), value);
+    frameAvailable();
   }
 
   @override

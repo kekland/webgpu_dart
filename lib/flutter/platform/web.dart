@@ -21,20 +21,22 @@ final class WebWebGpuWidgetState extends WebGpuWidgetState {
 
   @override
   Widget build(BuildContext context) {
-    return _WebWebGpuRenderObjectWidget(
-      renderable: widget.renderable,
-      canvas: _canvas,
-      child: HtmlElementView.fromTagName(
-        tagName: 'canvas',
-        onElementCreated: (element) {
-          _canvas = element as web.HTMLCanvasElement;
-          _canvas!.style.width = '100%';
-          _canvas!.style.height = '100%';
-          _canvas!.style.display = 'block';
-          _canvas!.style.pointerEvents = 'none';
+    return RepaintBoundary(
+      child: _WebWebGpuRenderObjectWidget(
+        renderable: widget.renderable,
+        canvas: _canvas,
+        child: HtmlElementView.fromTagName(
+          tagName: 'canvas',
+          onElementCreated: (element) {
+            _canvas = element as web.HTMLCanvasElement;
+            _canvas!.style.width = '100%';
+            _canvas!.style.height = '100%';
+            _canvas!.style.display = 'block';
+            _canvas!.style.pointerEvents = 'none';
 
-          setState(() {});
-        },
+            setState(() {});
+          },
+        ),
       ),
     );
   }

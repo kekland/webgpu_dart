@@ -12,7 +12,7 @@ WebGpuWidgetState createWebGpuWidgetState() => DarwinWebGpuWidgetState();
 final class DarwinWebGpuWidgetState extends WebGpuWidgetState {
   @override
   Widget build(BuildContext context) {
-    return _DarwinWebGpuRenderObjectWidget(renderable: widget.renderable);
+    return RepaintBoundary(child: _DarwinWebGpuRenderObjectWidget(renderable: widget.renderable));
   }
 }
 
@@ -105,7 +105,6 @@ final class DarwinWebGpuRenderObject extends WebGpuRenderObject {
 
     final endAccessState = memory.endAccess(texture);
     _texture!.present(endAccessState);
-    _texture!.frameAvailable();
   }
 
   @override

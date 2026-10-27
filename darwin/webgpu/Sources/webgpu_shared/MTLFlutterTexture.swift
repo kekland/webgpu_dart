@@ -88,10 +88,12 @@ func MTLFlutterTexture_present(_ ptr: UnsafeMutableRawPointer, _ event: MTLShare
 
   public func copyPixelBuffer() -> Unmanaged<CVPixelBuffer>? {
     let value = lock.withLock { pendingRender }
-    pendingRender = nil
   
     if let (buffer, event, eventValue) = value {
-      if event.wait(untilSignaledValue: eventValue, timeoutMS: 8) {
+      if event.wait(untilSignaledValue: eventValue, timeoutMS: 200) {
+        lock.withLock {
+          if pendingRender?.0 == buffer { pendingRender = nil }
+        }
         latest = buffer
       }
     }
