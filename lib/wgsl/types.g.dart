@@ -65,30 +65,6 @@ extension type const Vec2f._((double, double) _) {
   F32 get y => F32(_.$2);
 
   @pragma('vm:prefer-inline')
-  Vec2f.fromVector32(vm32.Vector2 v): this(
-    v.x,
-    v.y,
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec2f.fromVector64(vm64.Vector2 v): this(
-    v.x,
-    v.y,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector2 toVector32() => vm32.Vector2(
-    _.$1,
-    _.$2,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector2 toVector64() => vm64.Vector2(
-    _.$1,
-    _.$2,
-  );
-
-  @pragma('vm:prefer-inline')
   Vec2f.read(ByteData data, int offset): this(
     data.getFloat32(offset + 0, .little),
     data.getFloat32(offset + 4, .little),
@@ -110,34 +86,6 @@ extension type const Vec3f._((double, double, double) _) {
   F32 get x => F32(_.$1);
   F32 get y => F32(_.$2);
   F32 get z => F32(_.$3);
-
-  @pragma('vm:prefer-inline')
-  Vec3f.fromVector32(vm32.Vector3 v): this(
-    v.x,
-    v.y,
-    v.z,
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec3f.fromVector64(vm64.Vector3 v): this(
-    v.x,
-    v.y,
-    v.z,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector3 toVector32() => vm32.Vector3(
-    _.$1,
-    _.$2,
-    _.$3,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector3 toVector64() => vm64.Vector3(
-    _.$1,
-    _.$2,
-    _.$3,
-  );
 
   @pragma('vm:prefer-inline')
   Vec3f.read(ByteData data, int offset): this(
@@ -166,38 +114,6 @@ extension type const Vec4f._((double, double, double, double) _) {
   F32 get w => F32(_.$4);
 
   @pragma('vm:prefer-inline')
-  Vec4f.fromVector32(vm32.Vector4 v): this(
-    v.x,
-    v.y,
-    v.z,
-    v.w,
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec4f.fromVector64(vm64.Vector4 v): this(
-    v.x,
-    v.y,
-    v.z,
-    v.w,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector4 toVector32() => vm32.Vector4(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector4 toVector64() => vm64.Vector4(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-  );
-
-  @pragma('vm:prefer-inline')
   Vec4f.read(ByteData data, int offset): this(
     data.getFloat32(offset + 0, .little),
     data.getFloat32(offset + 4, .little),
@@ -224,30 +140,6 @@ extension type const Vec2i._((int, int) _) {
   I32 get y => I32(_.$2);
 
   @pragma('vm:prefer-inline')
-  Vec2i.fromVector32(vm32.Vector2 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec2i.fromVector64(vm64.Vector2 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector2 toVector32() => vm32.Vector2(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector2 toVector64() => vm64.Vector2(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
   Vec2i.read(ByteData data, int offset): this(
     data.getInt32(offset + 0, .little),
     data.getInt32(offset + 4, .little),
@@ -269,34 +161,6 @@ extension type const Vec3i._((int, int, int) _) {
   I32 get x => I32(_.$1);
   I32 get y => I32(_.$2);
   I32 get z => I32(_.$3);
-
-  @pragma('vm:prefer-inline')
-  Vec3i.fromVector32(vm32.Vector3 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-    v.z.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec3i.fromVector64(vm64.Vector3 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-    v.z.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector3 toVector32() => vm32.Vector3(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-    _.$3.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector3 toVector64() => vm64.Vector3(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-    _.$3.toDouble(),
-  );
 
   @pragma('vm:prefer-inline')
   Vec3i.read(ByteData data, int offset): this(
@@ -325,38 +189,6 @@ extension type const Vec4i._((int, int, int, int) _) {
   I32 get w => I32(_.$4);
 
   @pragma('vm:prefer-inline')
-  Vec4i.fromVector32(vm32.Vector4 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-    v.z.toInt(),
-    v.w.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec4i.fromVector64(vm64.Vector4 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-    v.z.toInt(),
-    v.w.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector4 toVector32() => vm32.Vector4(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-    _.$3.toDouble(),
-    _.$4.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector4 toVector64() => vm64.Vector4(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-    _.$3.toDouble(),
-    _.$4.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
   Vec4i.read(ByteData data, int offset): this(
     data.getInt32(offset + 0, .little),
     data.getInt32(offset + 4, .little),
@@ -383,30 +215,6 @@ extension type const Vec2u._((int, int) _) {
   U32 get y => U32(_.$2);
 
   @pragma('vm:prefer-inline')
-  Vec2u.fromVector32(vm32.Vector2 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec2u.fromVector64(vm64.Vector2 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector2 toVector32() => vm32.Vector2(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector2 toVector64() => vm64.Vector2(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
   Vec2u.read(ByteData data, int offset): this(
     data.getUint32(offset + 0, .little),
     data.getUint32(offset + 4, .little),
@@ -428,34 +236,6 @@ extension type const Vec3u._((int, int, int) _) {
   U32 get x => U32(_.$1);
   U32 get y => U32(_.$2);
   U32 get z => U32(_.$3);
-
-  @pragma('vm:prefer-inline')
-  Vec3u.fromVector32(vm32.Vector3 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-    v.z.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec3u.fromVector64(vm64.Vector3 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-    v.z.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector3 toVector32() => vm32.Vector3(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-    _.$3.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector3 toVector64() => vm64.Vector3(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-    _.$3.toDouble(),
-  );
 
   @pragma('vm:prefer-inline')
   Vec3u.read(ByteData data, int offset): this(
@@ -484,38 +264,6 @@ extension type const Vec4u._((int, int, int, int) _) {
   U32 get w => U32(_.$4);
 
   @pragma('vm:prefer-inline')
-  Vec4u.fromVector32(vm32.Vector4 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-    v.z.toInt(),
-    v.w.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec4u.fromVector64(vm64.Vector4 v): this(
-    v.x.toInt(),
-    v.y.toInt(),
-    v.z.toInt(),
-    v.w.toInt(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector4 toVector32() => vm32.Vector4(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-    _.$3.toDouble(),
-    _.$4.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector4 toVector64() => vm64.Vector4(
-    _.$1.toDouble(),
-    _.$2.toDouble(),
-    _.$3.toDouble(),
-    _.$4.toDouble(),
-  );
-
-  @pragma('vm:prefer-inline')
   Vec4u.read(ByteData data, int offset): this(
     data.getUint32(offset + 0, .little),
     data.getUint32(offset + 4, .little),
@@ -542,30 +290,6 @@ extension type const Vec2h._((double, double) _) {
   F16 get y => F16(_.$2);
 
   @pragma('vm:prefer-inline')
-  Vec2h.fromVector32(vm32.Vector2 v): this(
-    v.x,
-    v.y,
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec2h.fromVector64(vm64.Vector2 v): this(
-    v.x,
-    v.y,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector2 toVector32() => vm32.Vector2(
-    _.$1,
-    _.$2,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector2 toVector64() => vm64.Vector2(
-    _.$1,
-    _.$2,
-  );
-
-  @pragma('vm:prefer-inline')
   Vec2h.read(ByteData data, int offset): this(
     data.getFloat16(offset + 0, .little),
     data.getFloat16(offset + 4, .little),
@@ -587,34 +311,6 @@ extension type const Vec3h._((double, double, double) _) {
   F16 get x => F16(_.$1);
   F16 get y => F16(_.$2);
   F16 get z => F16(_.$3);
-
-  @pragma('vm:prefer-inline')
-  Vec3h.fromVector32(vm32.Vector3 v): this(
-    v.x,
-    v.y,
-    v.z,
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec3h.fromVector64(vm64.Vector3 v): this(
-    v.x,
-    v.y,
-    v.z,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector3 toVector32() => vm32.Vector3(
-    _.$1,
-    _.$2,
-    _.$3,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector3 toVector64() => vm64.Vector3(
-    _.$1,
-    _.$2,
-    _.$3,
-  );
 
   @pragma('vm:prefer-inline')
   Vec3h.read(ByteData data, int offset): this(
@@ -641,38 +337,6 @@ extension type const Vec4h._((double, double, double, double) _) {
   F16 get y => F16(_.$2);
   F16 get z => F16(_.$3);
   F16 get w => F16(_.$4);
-
-  @pragma('vm:prefer-inline')
-  Vec4h.fromVector32(vm32.Vector4 v): this(
-    v.x,
-    v.y,
-    v.z,
-    v.w,
-  );
-
-  @pragma('vm:prefer-inline')
-  Vec4h.fromVector64(vm64.Vector4 v): this(
-    v.x,
-    v.y,
-    v.z,
-    v.w,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Vector4 toVector32() => vm32.Vector4(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Vector4 toVector64() => vm64.Vector4(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-  );
 
   @pragma('vm:prefer-inline')
   Vec4h.read(ByteData data, int offset): this(
@@ -710,38 +374,6 @@ extension type const Mat2x2f._((double, double, double, double) _) {
     3 => F32(_.$4),
     _ => throw RangeError.index(index, this, 'index'),
   };
-
-  @pragma('vm:prefer-inline')
-  Mat2x2f.fromMatrix32(vm32.Matrix2 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-  );
-
-  @pragma('vm:prefer-inline')
-  Mat2x2f.fromMatrix64(vm64.Matrix2 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Matrix2 toMatrix32() => vm32.Matrix2(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Matrix2 toMatrix64() => vm64.Matrix2(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-  );
 
   @pragma('vm:prefer-inline')
   Mat2x2f.read(ByteData data, int offset): this(
@@ -932,58 +564,6 @@ extension type const Mat3x3f._((double, double, double, double, double, double, 
     8 => F32(_.$9),
     _ => throw RangeError.index(index, this, 'index'),
   };
-
-  @pragma('vm:prefer-inline')
-  Mat3x3f.fromMatrix32(vm32.Matrix3 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-    v[4],
-    v[5],
-    v[6],
-    v[7],
-    v[8],
-  );
-
-  @pragma('vm:prefer-inline')
-  Mat3x3f.fromMatrix64(vm64.Matrix3 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-    v[4],
-    v[5],
-    v[6],
-    v[7],
-    v[8],
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Matrix3 toMatrix32() => vm32.Matrix3(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-    _.$5,
-    _.$6,
-    _.$7,
-    _.$8,
-    _.$9,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Matrix3 toMatrix64() => vm64.Matrix3(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-    _.$5,
-    _.$6,
-    _.$7,
-    _.$8,
-    _.$9,
-  );
 
   @pragma('vm:prefer-inline')
   Mat3x3f.read(ByteData data, int offset): this(
@@ -1248,86 +828,6 @@ extension type const Mat4x4f._((double, double, double, double, double, double, 
   };
 
   @pragma('vm:prefer-inline')
-  Mat4x4f.fromMatrix32(vm32.Matrix4 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-    v[4],
-    v[5],
-    v[6],
-    v[7],
-    v[8],
-    v[9],
-    v[10],
-    v[11],
-    v[12],
-    v[13],
-    v[14],
-    v[15],
-  );
-
-  @pragma('vm:prefer-inline')
-  Mat4x4f.fromMatrix64(vm64.Matrix4 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-    v[4],
-    v[5],
-    v[6],
-    v[7],
-    v[8],
-    v[9],
-    v[10],
-    v[11],
-    v[12],
-    v[13],
-    v[14],
-    v[15],
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Matrix4 toMatrix32() => vm32.Matrix4(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-    _.$5,
-    _.$6,
-    _.$7,
-    _.$8,
-    _.$9,
-    _.$10,
-    _.$11,
-    _.$12,
-    _.$13,
-    _.$14,
-    _.$15,
-    _.$16,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Matrix4 toMatrix64() => vm64.Matrix4(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-    _.$5,
-    _.$6,
-    _.$7,
-    _.$8,
-    _.$9,
-    _.$10,
-    _.$11,
-    _.$12,
-    _.$13,
-    _.$14,
-    _.$15,
-    _.$16,
-  );
-
-  @pragma('vm:prefer-inline')
   Mat4x4f.read(ByteData data, int offset): this(
     data.getFloat32(offset + 0, .little),
     data.getFloat32(offset + 4, .little),
@@ -1387,38 +887,6 @@ extension type const Mat2x2h._((double, double, double, double) _) {
     3 => F16(_.$4),
     _ => throw RangeError.index(index, this, 'index'),
   };
-
-  @pragma('vm:prefer-inline')
-  Mat2x2h.fromMatrix32(vm32.Matrix2 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-  );
-
-  @pragma('vm:prefer-inline')
-  Mat2x2h.fromMatrix64(vm64.Matrix2 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Matrix2 toMatrix32() => vm32.Matrix2(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Matrix2 toMatrix64() => vm64.Matrix2(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-  );
 
   @pragma('vm:prefer-inline')
   Mat2x2h.read(ByteData data, int offset): this(
@@ -1609,58 +1077,6 @@ extension type const Mat3x3h._((double, double, double, double, double, double, 
     8 => F16(_.$9),
     _ => throw RangeError.index(index, this, 'index'),
   };
-
-  @pragma('vm:prefer-inline')
-  Mat3x3h.fromMatrix32(vm32.Matrix3 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-    v[4],
-    v[5],
-    v[6],
-    v[7],
-    v[8],
-  );
-
-  @pragma('vm:prefer-inline')
-  Mat3x3h.fromMatrix64(vm64.Matrix3 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-    v[4],
-    v[5],
-    v[6],
-    v[7],
-    v[8],
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Matrix3 toMatrix32() => vm32.Matrix3(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-    _.$5,
-    _.$6,
-    _.$7,
-    _.$8,
-    _.$9,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Matrix3 toMatrix64() => vm64.Matrix3(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-    _.$5,
-    _.$6,
-    _.$7,
-    _.$8,
-    _.$9,
-  );
 
   @pragma('vm:prefer-inline')
   Mat3x3h.read(ByteData data, int offset): this(
@@ -1923,86 +1339,6 @@ extension type const Mat4x4h._((double, double, double, double, double, double, 
     15 => F16(_.$16),
     _ => throw RangeError.index(index, this, 'index'),
   };
-
-  @pragma('vm:prefer-inline')
-  Mat4x4h.fromMatrix32(vm32.Matrix4 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-    v[4],
-    v[5],
-    v[6],
-    v[7],
-    v[8],
-    v[9],
-    v[10],
-    v[11],
-    v[12],
-    v[13],
-    v[14],
-    v[15],
-  );
-
-  @pragma('vm:prefer-inline')
-  Mat4x4h.fromMatrix64(vm64.Matrix4 v): this(
-    v[0],
-    v[1],
-    v[2],
-    v[3],
-    v[4],
-    v[5],
-    v[6],
-    v[7],
-    v[8],
-    v[9],
-    v[10],
-    v[11],
-    v[12],
-    v[13],
-    v[14],
-    v[15],
-  );
-
-  @pragma('vm:prefer-inline')
-  vm32.Matrix4 toMatrix32() => vm32.Matrix4(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-    _.$5,
-    _.$6,
-    _.$7,
-    _.$8,
-    _.$9,
-    _.$10,
-    _.$11,
-    _.$12,
-    _.$13,
-    _.$14,
-    _.$15,
-    _.$16,
-  );
-
-  @pragma('vm:prefer-inline')
-  vm64.Matrix4 toMatrix64() => vm64.Matrix4(
-    _.$1,
-    _.$2,
-    _.$3,
-    _.$4,
-    _.$5,
-    _.$6,
-    _.$7,
-    _.$8,
-    _.$9,
-    _.$10,
-    _.$11,
-    _.$12,
-    _.$13,
-    _.$14,
-    _.$15,
-    _.$16,
-  );
 
   @pragma('vm:prefer-inline')
   Mat4x4h.read(ByteData data, int offset): this(

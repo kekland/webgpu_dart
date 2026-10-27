@@ -1,6 +1,4 @@
 import 'dart:typed_data';
-import 'package:vector_math/vector_math.dart' as vm32;
-import 'package:vector_math/vector_math_64.dart' as vm64;
 import 'package:webgpu/webgpu.dart' as webgpu;
 
 part 'types.g.dart';
