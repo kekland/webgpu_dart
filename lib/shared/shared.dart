@@ -1,4 +1,5 @@
 import 'webgpu.g.dart';
+import 'types/types.dart';
 
 export 'types/types.dart';
 export 'chained_struct.dart';
@@ -50,4 +51,13 @@ extension LimitsToSupportedLimits on Limits {
     maxComputeWorkgroupsPerDimension: maxComputeWorkgroupsPerDimension!,
     maxImmediateSize: maxImmediateSize!,
   );
+}
+
+/// A utility class that represents a view into a [Buffer].
+extension type BufferView._((Buffer buffer, int offset, int size) _) {
+  BufferView(Buffer buffer, {int offset = 0, int? size}) : this._((buffer, offset, size ?? buffer.size));
+
+  Buffer get buffer => _.$1;
+  int get offset => _.$2;
+  int get size => _.$3;
 }
